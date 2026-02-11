@@ -25,16 +25,17 @@ export default function App() {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<string>("ALL");
   const [teacherId, setTeacherId] = useState<string | null>(null);
+  const termsUrl = `${import.meta.env.BASE_URL}terms.json`;
 
   useEffect(() => {
-    fetch("/terms.json")
+    fetch(termsUrl)
       .then((r) => r.json())
       .then(setData)
       .catch((e) => {
         console.error(e);
         setData(null);
       });
-  }, []);
+  }, [termsUrl]);
 
   const categories = useMemo(() => data?.categories ?? [], [data]);
   const terms = useMemo(() => data?.terms ?? [], [data]);
