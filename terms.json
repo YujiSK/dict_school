@@ -1,0 +1,3152 @@
+{
+  "meta": {
+    "name": "jp-pt-school-terms",
+    "version": "0.2.0",
+    "updatedAt": "2026-02-12",
+    "defaultLanguages": [
+      "ja",
+      "pt",
+      "en"
+    ],
+    "uiModes": [
+      "parent",
+      "teacher"
+    ]
+  },
+  "categories": [
+    {
+      "id": "C01",
+      "name": {
+        "ja": "提出・同意・連絡（定型文）",
+        "pt": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "C02",
+      "name": {
+        "ja": "行事・面談・検診・訓練（学校運営）",
+        "pt": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "C03",
+      "name": {
+        "ja": "場所・設備（校内）",
+        "pt": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "C04",
+      "name": {
+        "ja": "学校種・基本（学年など）",
+        "pt": "",
+        "en": ""
+      }
+    }
+  ],
+  "terms": [
+    {
+      "id": "T0001",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "提出してください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor apresentar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "提出してください"
+        ],
+        "pt": [
+          "Favor apresentar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0002",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "提出しません",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Não apresentar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "提出しません"
+        ],
+        "pt": [
+          "Não apresentar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0003",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "書いてください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor escrever",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "書いてください"
+        ],
+        "pt": [
+          "Favor escrever"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0004",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "確認してください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor conferir",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "確認してください"
+        ],
+        "pt": [
+          "Favor conferir"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0005",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "訂正してください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor retificar (documento)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "訂正してください"
+        ],
+        "pt": [
+          "Favor retificar (documento)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0006",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "印鑑を押してください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor carimbar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "印鑑を押してください"
+        ],
+        "pt": [
+          "Favor carimbar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0007",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "丸をつけてください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Circular",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "丸をつけてください"
+        ],
+        "pt": [
+          "Circular"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0008",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "名前を書いてください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor escrever o nome",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "名前を書いてください"
+        ],
+        "pt": [
+          "Favor escrever o nome"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0009",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "学校に電話してください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor telefonar para a escola",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学校に電話してください"
+        ],
+        "pt": [
+          "Favor telefonar para a escola"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0010",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "学校から電話します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "A escola telefonará",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学校から電話します"
+        ],
+        "pt": [
+          "A escola telefonará"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0011",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "欠席",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Falta",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "欠席"
+        ],
+        "pt": [
+          "Falta"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0012",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "出席します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Comparecer",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "出席します"
+        ],
+        "pt": [
+          "Comparecer"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0013",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "遅れないでください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor não atrasar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "遅れないでください"
+        ],
+        "pt": [
+          "Favor não atrasar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0014",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "登校します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Ir à escola",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "登校します"
+        ],
+        "pt": [
+          "Ir à escola"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0015",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "下校",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Voltar para casa (saída da escola)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "下校"
+        ],
+        "pt": [
+          "Voltar para casa (saída da escola)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0016",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "迎えに来てください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor vir buscar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "迎えに来てください"
+        ],
+        "pt": [
+          "Favor vir buscar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0017",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "参加します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Participar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "参加します"
+        ],
+        "pt": [
+          "Participar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0018",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "参加しません",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Não participar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "参加しません"
+        ],
+        "pt": [
+          "Não participar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0019",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "承諾します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Consinto",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "承諾します"
+        ],
+        "pt": [
+          "Consinto"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0020",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "承諾しません",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Não consinto",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "承諾しません"
+        ],
+        "pt": [
+          "Não consinto"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0021",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "連絡",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Aviso / Recado",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "連絡"
+        ],
+        "pt": [
+          "Aviso / Recado"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0022",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "連絡帳",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Caderno de comunicados",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "連絡帳"
+        ],
+        "pt": [
+          "Caderno de comunicados"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0023",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "連絡袋",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Pasta para caderno de comunicados",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "連絡袋"
+        ],
+        "pt": [
+          "Pasta para caderno de comunicados"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0024",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "延期します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Adiaremos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "延期します"
+        ],
+        "pt": [
+          "Adiaremos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0025",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "返金します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Devolução de dinheiro",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "返金します"
+        ],
+        "pt": [
+          "Devolução de dinheiro"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0026",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "変更します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Alteraremos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "変更します"
+        ],
+        "pt": [
+          "Alteraremos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0027",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "集めます",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Recolheremos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "集めます"
+        ],
+        "pt": [
+          "Recolheremos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0028",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "登録をしてください",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Favor cadastrar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "登録をしてください"
+        ],
+        "pt": [
+          "Favor cadastrar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0029",
+      "type": "phrase",
+      "categoryId": "C01",
+      "ja": "メールで連絡します",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Avisaremos através de e-mail",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "メールで連絡します"
+        ],
+        "pt": [
+          "Avisaremos através de e-mail"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0030",
+      "type": "term",
+      "categoryId": "C01",
+      "ja": "学校で買います",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Escola vai comprar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学校で買います"
+        ],
+        "pt": [
+          "Escola vai comprar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0031",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "入学式",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Cerimônia de Ingresso",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "入学式"
+        ],
+        "pt": [
+          "Cerimônia de Ingresso"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0032",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "卒業式",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Cerimônia de Formatura",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "卒業式"
+        ],
+        "pt": [
+          "Cerimônia de Formatura"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0033",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "始業式",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Cerimônia de Início da Aula",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "始業式"
+        ],
+        "pt": [
+          "Cerimônia de Início da Aula"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0034",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "終業式",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Cerimônia de Término da Aula",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "終業式"
+        ],
+        "pt": [
+          "Cerimônia de Término da Aula"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0035",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "入学説明会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Orientações para o Ingresso na escola",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "入学説明会"
+        ],
+        "pt": [
+          "Orientações para o Ingresso na escola"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0036",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "就学時健康診断",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exames Médicos para os Alunos que ingressarão no Shogakkou",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "就学時健康診断"
+        ],
+        "pt": [
+          "Exames Médicos para os Alunos que ingressarão no Shogakkou"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0037",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "授業参観",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Participação dos Pais na Sala de Aula",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "授業参観"
+        ],
+        "pt": [
+          "Participação dos Pais na Sala de Aula"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0038",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "学級保護者会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Reunião de pais e mestres",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学級保護者会"
+        ],
+        "pt": [
+          "Reunião de pais e mestres"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0039",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "学級懇談会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Reunião de pais e mestres",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学級懇談会"
+        ],
+        "pt": [
+          "Reunião de pais e mestres"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0040",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "個人面談",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Reunião Individual",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "個人面談"
+        ],
+        "pt": [
+          "Reunião Individual"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0041",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "家庭訪問",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Visita do Professor à Residência dos Alunos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "家庭訪問"
+        ],
+        "pt": [
+          "Visita do Professor à Residência dos Alunos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0042",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "健康診断",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame Médico",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "健康診断"
+        ],
+        "pt": [
+          "Exame Médico"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0043",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "内科検診",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame de Clínica Geral",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "内科検診"
+        ],
+        "pt": [
+          "Exame de Clínica Geral"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0044",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "身体測定",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Medida de Peso e Altura",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "身体測定"
+        ],
+        "pt": [
+          "Medida de Peso e Altura"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0045",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "歯科検診",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame Odontológico",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "歯科検診"
+        ],
+        "pt": [
+          "Exame Odontológico"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0046",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "眼科検診",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame Oftalmológico",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "眼科検診"
+        ],
+        "pt": [
+          "Exame Oftalmológico"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0047",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "耳鼻咽喉科検診",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame Otorrinolaringológico",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "耳鼻咽喉科検診"
+        ],
+        "pt": [
+          "Exame Otorrinolaringológico"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0048",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "尿検査",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame de Urina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "尿検査"
+        ],
+        "pt": [
+          "Exame de Urina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0049",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "予防接種",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Vacina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "予防接種"
+        ],
+        "pt": [
+          "Vacina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0050",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "視力検査",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Teste de visão",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "視力検査"
+        ],
+        "pt": [
+          "Teste de visão"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0051",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "心電図検査",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame de eletrocardiograma",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "心電図検査"
+        ],
+        "pt": [
+          "Exame de eletrocardiograma"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0052",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "結核検診",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exame de tuberculose",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "結核検診"
+        ],
+        "pt": [
+          "Exame de tuberculose"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0053",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "防災訓練",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Treinamento em caso de desastre",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "防災訓練"
+        ],
+        "pt": [
+          "Treinamento em caso de desastre"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0054",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "引渡し訓練",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Treinamento para buscar o aluno na escola",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "引渡し訓練"
+        ],
+        "pt": [
+          "Treinamento para buscar o aluno na escola"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0055",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "遠足",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Passeio",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "遠足"
+        ],
+        "pt": [
+          "Passeio"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0056",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "校外学習",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Atividade fora da Escola",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "校外学習"
+        ],
+        "pt": [
+          "Atividade fora da Escola"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0057",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "修学旅行",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Excursão Escolar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "修学旅行"
+        ],
+        "pt": [
+          "Excursão Escolar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0058",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "臨海学校",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Curso na Praia",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "臨海学校"
+        ],
+        "pt": [
+          "Curso na Praia"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0059",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "林間学校",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Curso no Campo",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "林間学校"
+        ],
+        "pt": [
+          "Curso no Campo"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0060",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "運動会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Gincana Escolar",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "運動会"
+        ],
+        "pt": [
+          "Gincana Escolar"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0061",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "体育祭",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Competição de Educação Física",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "体育祭"
+        ],
+        "pt": [
+          "Competição de Educação Física"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0062",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "作品展",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Exposição de Trabalhos Manuais dos Alunos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "作品展"
+        ],
+        "pt": [
+          "Exposição de Trabalhos Manuais dos Alunos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0063",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "文化祭",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Festa Cultural",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "文化祭"
+        ],
+        "pt": [
+          "Festa Cultural"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0064",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "学芸会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Apresentação artística dos Alunos",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学芸会"
+        ],
+        "pt": [
+          "Apresentação artística dos Alunos"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0065",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "宿泊学習",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Viagem escolar (com pernoite)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "宿泊学習"
+        ],
+        "pt": [
+          "Viagem escolar (com pernoite)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0066",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "芸術鑑賞会",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Festival de apreciar arte",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "芸術鑑賞会"
+        ],
+        "pt": [
+          "Festival de apreciar arte"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0067",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "年間行事予定",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Programação prevista dos eventos anuais",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "年間行事予定"
+        ],
+        "pt": [
+          "Programação prevista dos eventos anuais"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0068",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "尿検査アンケート",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Questionário do exame de urina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "尿検査アンケート"
+        ],
+        "pt": [
+          "Questionário do exame de urina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0069",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "尿検査提出",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Apresentar a urina coletada para o exame de urina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "尿検査提出"
+        ],
+        "pt": [
+          "Apresentar a urina coletada para o exame de urina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0070",
+      "type": "term",
+      "categoryId": "C02",
+      "ja": "尿検査容器配布",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Distribuição do recipiente para o exame de urina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "尿検査容器配布"
+        ],
+        "pt": [
+          "Distribuição do recipiente para o exame de urina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0071",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "職員室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala dos professores",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "職員室"
+        ],
+        "pt": [
+          "Sala dos professores"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0072",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "事務室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Secretaria",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "事務室"
+        ],
+        "pt": [
+          "Secretaria"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0073",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "校長室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala do diretor",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "校長室"
+        ],
+        "pt": [
+          "Sala do diretor"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0074",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "保健室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Enfermaria",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "保健室"
+        ],
+        "pt": [
+          "Enfermaria"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0075",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "図書室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Biblioteca",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "図書室"
+        ],
+        "pt": [
+          "Biblioteca"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0076",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "音楽室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de música",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "音楽室"
+        ],
+        "pt": [
+          "Sala de música"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0077",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "理科室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de ciências (laboratório)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "理科室"
+        ],
+        "pt": [
+          "Sala de ciências (laboratório)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0078",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "図工室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de artes",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "図工室"
+        ],
+        "pt": [
+          "Sala de artes"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0079",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "家庭科室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de economia doméstica",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "家庭科室"
+        ],
+        "pt": [
+          "Sala de economia doméstica"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0080",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "体育館",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Quadra coberta",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "体育館"
+        ],
+        "pt": [
+          "Quadra coberta"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0081",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "校庭",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Pátio (quadra externa)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "校庭"
+        ],
+        "pt": [
+          "Pátio (quadra externa)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0082",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "プール",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Piscina",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "プール"
+        ],
+        "pt": [
+          "Piscina"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0083",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "廊下",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Corredor",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "廊下"
+        ],
+        "pt": [
+          "Corredor"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0084",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "教室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de aula",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "教室"
+        ],
+        "pt": [
+          "Sala de aula"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0085",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "トイレ",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Banheiro",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "トイレ"
+        ],
+        "pt": [
+          "Banheiro"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0086",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "会議室",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sala de reunião",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S003",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "会議室"
+        ],
+        "pt": [
+          "Sala de reunião"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0087",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "上履き",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Uwabaki (sapato de uso interno)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "上履き"
+        ],
+        "pt": [
+          "Uwabaki (sapato de uso interno)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0088",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "体育館シューズ",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Tênis apropriado para quadra coberta",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "体育館シューズ"
+        ],
+        "pt": [
+          "Tênis apropriado para quadra coberta"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0089",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "体育館シューズ袋",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Sacola para o tênis apropriado para a quadra coberta",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "体育館シューズ袋"
+        ],
+        "pt": [
+          "Sacola para o tênis apropriado para a quadra coberta"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0090",
+      "type": "term",
+      "categoryId": "C03",
+      "ja": "ワックスがけ（教室、廊下）",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Enceramento (classes e corredores)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "ワックスがけ（教室、廊下）"
+        ],
+        "pt": [
+          "Enceramento (classes e corredores)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0091",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "小学校",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Escola primária",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "小学校"
+        ],
+        "pt": [
+          "Escola primária"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0092",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "中学校",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Escola ginasial",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "中学校"
+        ],
+        "pt": [
+          "Escola ginasial"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0093",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "学年",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Série",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "学年"
+        ],
+        "pt": [
+          "Série"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0094",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "組",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Classe",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "組"
+        ],
+        "pt": [
+          "Classe"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0095",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "番",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Número",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "番"
+        ],
+        "pt": [
+          "Número"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0096",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "ノート",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Caderno",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "ノート"
+        ],
+        "pt": [
+          "Caderno"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0097",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "ハンカチ",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Lenço",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "ハンカチ"
+        ],
+        "pt": [
+          "Lenço"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0098",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "リュック",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Mochila",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "リュック"
+        ],
+        "pt": [
+          "Mochila"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0099",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "旅行用かばん（大きい）",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Bolsa de Viagem (Grande)",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "旅行用かばん（大きい）"
+        ],
+        "pt": [
+          "Bolsa de Viagem (Grande)"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    },
+    {
+      "id": "T0100",
+      "type": "term",
+      "categoryId": "C04",
+      "ja": "部活動が あります",
+      "jaEasy": "",
+      "translations": {
+        "pt": "Haverá atividade extracurricular",
+        "en": ""
+      },
+      "examples": {},
+      "sourceRefs": [
+        {
+          "sourceId": "S002",
+          "page": null,
+          "note": ""
+        }
+      ],
+      "search": {
+        "ja": [
+          "部活動が あります"
+        ],
+        "pt": [
+          "Haverá atividade extracurricular"
+        ],
+        "en": []
+      },
+      "status": "draft",
+      "confidence": 0.8,
+      "notes": ""
+    }
+  ]
+}

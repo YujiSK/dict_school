@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "name": "jp-pt-school-terms-sources",
+    "version": "0.2.0",
+    "updatedAt": "2026-02-12",
+    "policy": {
+      "copyingRule": "PDFの表・例文・解説文は転載しない。対訳語は参照して独自データとして再編集する。",
+      "licenseRule": "利用条件URLを必ず保持。不明は status=needs_review にし、terms側では採用保留できる状態にする。"
+    }
+  },
+  "sources": [
+    {
+      "id": "S001",
+      "title": "日本語教育コンテンツ共有システム（NEWS）掲載：岩倉市 日本語・ポルトガル語適応指導教室（教材群の紹介ページ）",
+      "publisher": "文部科学省運営（掲載）／岩倉市教育委員会（コンテンツ提供）",
+      "publisherType": "national_portal",
+      "region": "Aichi / Iwakura",
+      "primaryDomain": "nihongo-ews.mext.go.jp",
+      "urls": {
+        "page": "https://www.nihongo-ews.mext.go.jp/contents/view?id=186",
+        "pdf": null
+      },
+      "publishedAt": null,
+      "languages": [
+        "ja",
+        "pt",
+        "es"
+      ],
+      "scopeTags": [
+        "school_terms",
+        "school_life",
+        "letters",
+        "health",
+        "events",
+        "pta",
+        "procedures"
+      ],
+      "license": {
+        "type": "no_reupload",
+        "licenseUrl": "https://www.nihongo-ews.mext.go.jp/contents/view?id=179",
+        "evidence": "掲載側で「印刷利用等は自由だが無断転載禁止」趣旨が明記されている（利用条件の根拠URLとして強い）。"
+      },
+      "status": "confirmed",
+      "notes": "岩倉市側PDF（gayougo/gapo/listpo等）の直URLは別途 source としても登録可能。まずは利用条件根拠としてNEWS側を採用。"
+    },
+    {
+      "id": "S002",
+      "title": "がっこうのことば（第2版）ダウンロードページ",
+      "publisher": "多文化ルームKIBOU（西尾市の学校支援文脈）／（PDF内表記：西尾市教育委員会）",
+      "publisherType": "local_support_org",
+      "region": "Aichi / Nishio",
+      "primaryDomain": "tabunkakibou.com",
+      "urls": {
+        "page": "https://tabunkakibou.com/resource/",
+        "pdf": null
+      },
+      "publishedAt": "2021-04",
+      "languages": [
+        "ja",
+        "pt",
+        "en",
+        "es",
+        "tl",
+        "vi",
+        "id",
+        "zh"
+      ],
+      "scopeTags": [
+        "school_terms",
+        "school_life",
+        "letters",
+        "common_phrases",
+        "schedule"
+      ],
+      "license": {
+        "type": "unclear",
+        "licenseUrl": "https://tabunkakibou.com/resource/",
+        "evidence": "ページに「ダウンロードして使えます」とあるが、転載・改変・再配布許諾の明文化は未確認。"
+      },
+      "status": "needs_review",
+      "notes": "初期100語の“語彙選定の現場性”として非常に有用。辞書データは独自編集で作る前提。"
+    },
+    {
+      "id": "S003",
+      "title": "がっこうのことば（第2版）PDF例：Tagalog版（PDF内に『西尾市教育委員会 2021年4月』表記）",
+      "publisher": "西尾市教育委員会（PDF内表記）",
+      "publisherType": "local_gov",
+      "region": "Aichi / Nishio",
+      "primaryDomain": "tabunkakibou.com",
+      "urls": {
+        "page": null,
+        "pdf": "https://tabunkakibou.com/wp-content/uploads/2021/06/gakkonokotoba2-tagalog.pdf"
+      },
+      "publishedAt": "2021-04",
+      "languages": [
+        "ja",
+        "tl"
+      ],
+      "scopeTags": [
+        "school_terms",
+        "school_life",
+        "common_phrases"
+      ],
+      "license": {
+        "type": "unclear",
+        "licenseUrl": "https://tabunkakibou.com/resource/",
+        "evidence": "配布ページからDL可能。著作権・二次利用条件の明文化は未確認。"
+      },
+      "status": "needs_review",
+      "notes": "ポルトガル語版PDF（pt）は同ページのリンクから取得して、urlPdfに差し替える想定。"
+    },
+    {
+      "id": "S004",
+      "title": "学校からのおたより（ポルトガル語）— 用語集（pt-glossary.pdf）配布ページ",
+      "publisher": "公益財団法人 ちば国際コンベンションビューロー・千葉県国際交流センター（CCB-IC）",
+      "publisherType": "public_foundation",
+      "region": "Chiba",
+      "primaryDomain": "mcic.or.jp",
+      "urls": {
+        "page": "https://www.mcic.or.jp/support_for_foreigners/information_from_school/pt/",
+        "pdf": null
+      },
+      "publishedAt": null,
+      "languages": [
+        "ja",
+        "pt"
+      ],
+      "scopeTags": [
+        "school_letters",
+        "school_terms",
+        "health",
+        "events",
+        "pta",
+        "schedule"
+      ],
+      "license": {
+        "type": "no_reupload",
+        "licenseUrl": "https://www.mcic.or.jp/support_for_foreigners/information_from_school/pt/",
+        "evidence": "ページ内に「禁無断転載・不許複製」表記あり。"
+      },
+      "status": "confirmed",
+      "notes": "辞書側は対訳の参照・整合用途。PDFの表組や文面の転載は避ける。"
+    },
+    {
+      "id": "S005",
+      "title": "日本の学校生活ガイダンス 用語集（ポルトガル語）",
+      "publisher": "公益財団法人 京都府国際センター（KPIC）",
+      "publisherType": "public_foundation",
+      "region": "Kyoto",
+      "primaryDomain": "kpic.or.jp",
+      "urls": {
+        "page": null,
+        "pdf": "https://www.kpic.or.jp/content/files/shichoson/portuguese/jslg_voca_por.pdf"
+      },
+      "publishedAt": null,
+      "languages": [
+        "ja",
+        "pt"
+      ],
+      "scopeTags": [
+        "school_system",
+        "school_life",
+        "school_terms",
+        "procedures",
+        "pta",
+        "fees",
+        "attendance"
+      ],
+      "license": {
+        "type": "assume_copyright",
+        "licenseUrl": null,
+        "evidence": "PDF配布は確認できるが、転載許諾の明文化は未確認（一般的な著作権扱い前提）。"
+      },
+      "status": "needs_review",
+      "notes": "制度・手続き寄りの“標準訳”として有用。利用条件URLが見つかれば差し込み。"
+    },
+    {
+      "id": "S006",
+      "title": "愛知県国際交流協会：子どもの教育に関する資料リンク集（索引PDF）",
+      "publisher": "公益財団法人 愛知県国際交流協会（AIA）",
+      "publisherType": "public_foundation",
+      "region": "Aichi",
+      "primaryDomain": "www2.aia.pref.aichi.jp",
+      "urls": {
+        "page": null,
+        "pdf": "https://www2.aia.pref.aichi.jp/sodan/j/manual/img/202503kodomonokyouiku/00all.pdf"
+      },
+      "publishedAt": null,
+      "languages": [
+        "ja"
+      ],
+      "scopeTags": [
+        "index",
+        "curation",
+        "school_support",
+        "multilingual_materials"
+      ],
+      "license": {
+        "type": "assume_copyright",
+        "licenseUrl": null,
+        "evidence": "索引PDF。二次利用条件の明文化は未確認。"
+      },
+      "status": "needs_review",
+      "notes": "直接の『学校用語 日⇔PT』ではなく、豊橋市教委など“次の一次ソース”を掘り当てるための地図として使う。"
+    }
+  ],
+  "nextAddCandidates": [
+    {
+      "id": "CAND_T001",
+      "hint": "岩倉市のPDF直リンク（gayougo.pdf / gapo.pdf / listpo.pdf）を個別sourceとして追加",
+      "priority": "high",
+      "why": "一次ソースとして強く、用語抽出が容易。利用条件根拠はNEWSページ（S001）で担保可能。"
+    },
+    {
+      "id": "CAND_T002",
+      "hint": "西尾『がっこうのことば』ポルトガル語版PDFの直URLを取得してS003を置換",
+      "priority": "high",
+      "why": "初期100語の現場性が高い。PT版を確実にsource化したい。"
+    },
+    {
+      "id": "CAND_T003",
+      "hint": "MCICのpt-glossary.pdf直URLをS004に追加（可能ならxlsも）",
+      "priority": "high",
+      "why": "通知文頻出語彙の根拠として強い。辞書生成時に自動参照しやすい。"
+    },
+    {
+      "id": "CAND_T004",
+      "hint": "KPICサイトの利用条件（site policy / copyright）URLを探索してS005に追加",
+      "priority": "medium",
+      "why": "転載可否の線引きを明文化できると運用が安定する。"
+    },
+    {
+      "id": "CAND_G001",
+      "hint": "群馬：大泉町・太田市・伊勢崎市の教育委員会/国際交流/多文化ページで『学校』『ポルトガル語』『用語集』『がっこうのことば』系PDF探索",
+      "priority": "high",
+      "why": "県ドメインより市町村側の配布教材に眠っている可能性が高い。"
+    },
+    {
+      "id": "CAND_F001",
+      "hint": "福井：越前市（教育委員会/国際交流）で学校向け多言語配布物PDF探索",
+      "priority": "high",
+      "why": "ブラジル人比率が高い地域のため、学校向け資料整備の可能性が高い。"
+    },
+    {
+      "id": "CAND_A001",
+      "hint": "愛知：豊橋市教育委員会の外国人児童生徒向け資料（AIA索引に存在示唆）を一次ソースとして発掘",
+      "priority": "high",
+      "why": "豊田周辺の補完になる“愛知の学校現場系”一次ソースになり得る。"
+    }
+  ]
+}
