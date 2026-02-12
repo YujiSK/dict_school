@@ -14,6 +14,7 @@ from typing import Dict, List, Sequence
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TERMS_PATH = REPO_ROOT / "terms.json"
+SOURCES_PATH = REPO_ROOT / "sources.json"
 REPORT_ROOT = REPO_ROOT / "work_md" / "audit_reports"
 
 JA_SENTENCE_TOKENS = "。？！!?"
@@ -21,6 +22,8 @@ JA_TOKEN_SPLIT_RE = re.compile(
     r"[\s、,，・·/／\\()（）\[\]{}【】「」『』<>\"'。、…~〜！？!?:;＋+\-]+"
 )
 PT_TOKEN_SPLIT_RE = re.compile(r"[^a-z0-9]+")
+SOURCE_ID_RE = re.compile(r"^S\d{4}$")
+ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PHRASE_KEYWORDS = [
     "ください",
     "お願いします",
@@ -38,6 +41,7 @@ PHRASE_KEYWORDS = [
 class FixStats:
     type_updates: int = 0
     search_updates: int = 0
+    sources_added: int = 0
     terms_modified: int = 0
     json_modified: bool = False
 
@@ -143,6 +147,13 @@ def write_terms(payload: Dict) -> None:
         handle.write("\n")
 
 
+def load_sources() -> Dict:
+    if not SOURCES_PATH.exists():
+        raise FileNotFoundError(f"sources.json not found at {SOURCES_PATH}")
+    with SOURCES_PATH.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
 def detect_duplicates(terms: List[Dict], key_getter, value_getter) -> Dict[str, List[Dict[str, str]]]:
     buckets: Dict[str, List[Dict[str, str]]] = {}
     for term in terms:
@@ -159,7 +170,12 @@ def detect_duplicates(terms: List[Dict], key_getter, value_getter) -> Dict[str, 
     return {k: sorted(v, key=lambda item: item["id"]) for k, v in buckets.items() if len(v) > 1}
 
 
-def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
+def analyze_terms(
+    terms: List[Dict],
+    categories: List[Dict],
+    sources_payload: Dict | None,
+    source_load_errors: List[Dict[str, str]],
+) -> Dict:
     duplicate_ja = detect_duplicates(
         terms,
         lambda term: normalize_ja(term.get("ja")),
@@ -178,6 +194,62 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
     structural_errors = []
     duplicate_ids: List[str] = []
     unknown_categories: List[Dict[str, str]] = []
+    sources_errors: List[Dict[str, str]] = list(source_load_errors)
+    sources_warnings: List[Dict[str, str]] = []
+    term_source_errors: List[Dict[str, str]] = []
+    referenced_sources: set[str] = set()
+
+    sources_index: Dict[str, Dict] = {}
+    if sources_payload is not None:
+        sources_list = sources_payload.get("sources")
+        if not isinstance(sources_list, list):
+            sources_errors.append(
+                {"id": "<payload>", "field": "sources", "detail": "sources must be a list"}
+            )
+        else:
+            seen_source_ids: set[str] = set()
+            for source in sources_list:
+                if not isinstance(source, dict):
+                    sources_errors.append(
+                        {"id": "<payload>", "field": "source", "detail": "Each source must be an object"}
+                    )
+                    continue
+                sid = source.get("id")
+                if not isinstance(sid, str) or not sid:
+                    sources_errors.append({"id": "<missing>", "field": "id", "detail": "Source ID missing"})
+                    continue
+                if not SOURCE_ID_RE.fullmatch(sid):
+                    sources_errors.append(
+                        {"id": sid, "field": "id", "detail": "Source ID must match S####"}
+                    )
+                    continue
+                if sid in seen_source_ids:
+                    sources_errors.append({"id": sid, "field": "id", "detail": "Duplicate source ID"})
+                    continue
+                seen_source_ids.add(sid)
+                title = source.get("title")
+                stype = source.get("type")
+                if not isinstance(title, str) or not title.strip():
+                    sources_errors.append({"id": sid, "field": "title", "detail": "Title is required"})
+                if not isinstance(stype, str) or not stype.strip():
+                    sources_errors.append({"id": sid, "field": "type", "detail": "Type is required"})
+                url = source.get("url")
+                if url:
+                    if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+                        sources_warnings.append(
+                            {"id": sid, "field": "url", "detail": "URL should start with http/https"}
+                        )
+                accessed_at = source.get("accessed_at")
+                if accessed_at:
+                    if not isinstance(accessed_at, str) or not ISO_DATE_RE.fullmatch(accessed_at):
+                        sources_warnings.append(
+                            {
+                                "id": sid,
+                                "field": "accessed_at",
+                                "detail": "Use YYYY-MM-DD format",
+                            }
+                        )
+                sources_index[sid] = source
 
     seen_ids: set[str] = set()
     valid_categories = {item.get("id") for item in categories if item.get("id")}
@@ -240,6 +312,27 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
         if not desired_search["ja"] or not desired_search["pt"]:
             empty_search.append({"id": term_id, "ja": ja_original})
 
+        sources_field = term.get("sources")
+        if sources_field is None:
+            term_source_errors.append({"id": term_id, "detail": "sources field missing"})
+        elif not isinstance(sources_field, list):
+            term_source_errors.append({"id": term_id, "detail": "sources must be a list"})
+        else:
+            for entry in sources_field:
+                if not isinstance(entry, str) or not entry:
+                    term_source_errors.append(
+                        {"id": term_id, "detail": "Source references must be non-empty strings"}
+                    )
+                    continue
+                if sources_index and entry not in sources_index:
+                    term_source_errors.append(
+                        {"id": term_id, "detail": f"Unknown source ID {entry}"}
+                    )
+                if entry in sources_index:
+                    referenced_sources.add(entry)
+
+    unused_sources = sorted(sid for sid in sources_index if sid not in referenced_sources)
+
     blocking_issues = []
     if structural_errors:
         blocking_issues.append(f"{len(structural_errors)} structural issues detected")
@@ -251,11 +344,15 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
         blocking_issues.append(f"{len(type_mismatches)} type mismatches (see Section 3)")
     if missing_search:
         blocking_issues.append(f"{len(missing_search)} terms missing search field (see Section 4)")
+    if sources_errors:
+        blocking_issues.append(f"{len(sources_errors)} source ledger errors (see Section 5)")
+    if term_source_errors:
+        blocking_issues.append(f"{len(term_source_errors)} term source issues (see Section 5)")
 
     status = "PASS"
     if blocking_issues:
         status = "FAIL"
-    elif duplicate_ja or duplicate_pt or empty_search:
+    elif duplicate_ja or duplicate_pt or empty_search or sources_warnings or unused_sources:
         status = "WARN"
 
     return {
@@ -270,6 +367,10 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
         "structural_errors": structural_errors,
         "duplicate_ids": duplicate_ids,
         "unknown_categories": unknown_categories,
+        "sources_errors": sources_errors,
+        "sources_warnings": sources_warnings,
+        "term_source_errors": term_source_errors,
+        "unused_sources": unused_sources,
         "blocking_issues": blocking_issues,
         "status": status,
     }
@@ -296,6 +397,12 @@ def apply_fixes(terms: List[Dict]) -> FixStats:
         if existing.get("ja") != desired_search["ja"] or existing.get("pt") != desired_search["pt"]:
             term["search"] = desired_search
             stats.search_updates += 1
+            if term_id:
+                modified_ids.add(term_id)
+
+        if "sources" not in term:
+            term["sources"] = []
+            stats.sources_added += 1
             if term_id:
                 modified_ids.add(term_id)
 
@@ -359,11 +466,35 @@ def render_auto_fix_preview(entries: List[Dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
+def render_source_issue_list(items: List[Dict[str, str]]) -> str:
+    if not items:
+        return "None"
+    lines = []
+    for item in items:
+        field = item.get("field", "-")
+        detail = item.get("detail", "")
+        lines.append(f"- {item.get('id', '<unknown>')} | {field} | {detail}")
+    return "\n".join(lines)
+
+
+def render_term_source_issues(items: List[Dict[str, str]]) -> str:
+    if not items:
+        return "None"
+    return "\n".join(f"- {item['id']} | {item['detail']}" for item in items)
+
+
+def render_unused_sources(ids: List[str]) -> str:
+    if not ids:
+        return "None"
+    return "\n".join(f"- {sid}" for sid in ids)
+
+
 def render_fix_section(stats: FixStats, duplicate_count: int) -> str:
     lines = [
         f"- Terms updated: {stats.terms_modified}",
         f"- Types updated: {stats.type_updates}",
         f"- Search fields generated: {stats.search_updates}",
+        f"- Sources initialized: {stats.sources_added}",
         f"- Duplicates flagged (not auto-removed): {duplicate_count}",
         "\nJSON modified:",
         f"- {'YES' if stats.json_modified else 'NO'}",
@@ -387,6 +518,9 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
         f"- Duplicate PT: {len(analysis['duplicate_pt'])}",
         f"- Type mismatch: {len(analysis['type_mismatches'])}",
         f"- Missing search field: {len(analysis['missing_search'])}",
+        f"- Source ledger errors: {len(analysis['sources_errors'])}",
+        f"- Source ledger warnings: {len(analysis['sources_warnings'])}",
+        f"- Unreferenced sources: {len(analysis['unused_sources'])}",
         f"- Auto-fix required: {'YES' if analysis['status'] == 'FAIL' else 'NO'}",
         "",
         "Overall Status:",
@@ -401,7 +535,7 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
     sections = [
         "# Audit Report Specification",
         "Project: jp-pt-school-terms",
-        "Scope: Issue #2 – Data Quality Automation",
+        "Scope: Issue #2 – Data Quality Automation / Issue #3 – Sources Ledger MVP",
         f"Generated by: scripts/audit_terms.py --{mode}",
         "\n---\n",
         "# 1. Summary\n" + "\n".join(summary_lines),
@@ -418,30 +552,39 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
         "\n## 4.1 Missing Search\n" + render_simple_list(analysis["missing_search"]),
         "\n\n## 4.2 Empty Search Arrays\n" + render_simple_list(analysis["empty_search"]),
         "\n---\n",
+        "# 5. Sources Ledger Audit",
+        "\n## 5.1 Ledger Errors (FAIL)\n" + render_source_issue_list(analysis["sources_errors"]),
+        "\n---\n",
+        "## 5.2 Ledger Warnings (WARN)\n" + render_source_issue_list(analysis["sources_warnings"]),
+        "\n---\n",
+        "## 5.3 Term Reference Issues\n" + render_term_source_issues(analysis["term_source_errors"]),
+        "\n---\n",
+        "## 5.4 Unreferenced Sources\n" + render_unused_sources(analysis["unused_sources"]),
+        "\n---\n",
     ]
 
     if include_preview:
-        sections.append("# 5. Auto-Fix Preview\n" + render_auto_fix_preview(analysis["auto_fix_preview"]))
+        sections.append("# 6. Auto-Fix Preview\n" + render_auto_fix_preview(analysis["auto_fix_preview"]))
         sections.append("\n---\n")
         sections.append(
-            "# 6. Fix Execution Report (Only when --fix used)\nNot executed (ran with --check).\n\n- Terms updated: None\n- Types updated: None\n- Search fields generated: None\n- Duplicates flagged (not auto-removed): None\n\nJSON modified:\n- NO"
+            "# 7. Fix Execution Report (Only when --fix used)\nNot executed (ran with --check).\n\n- Terms updated: None\n- Types updated: None\n- Search fields generated: None\n- Sources initialized: None\n- Duplicates flagged (not auto-removed): None\n\nJSON modified:\n- NO"
         )
     else:
-        sections.append("# 5. Auto-Fix Preview\nNone")
+        sections.append("# 6. Auto-Fix Preview\nNone")
         sections.append("\n---\n")
         sections.append(
-            "# 6. Fix Execution Report (Only when --fix used)\n" + render_fix_section(
+            "# 7. Fix Execution Report (Only when --fix used)\n" + render_fix_section(
                 fix_stats, len(analysis["duplicate_ja"]) + len(analysis["duplicate_pt"])
             )
         )
 
     sections.append("\n---\n")
-    sections.append("# 7. Blocking Issues\n" + blocking)
+    sections.append("# 8. Blocking Issues\n" + blocking)
 
     sections.extend(
         [
             "\n---\n",
-            "# 8. Recommended Action\n- " + recommended_action(analysis["status"]),
+            "# 9. Recommended Action\n- " + recommended_action(analysis["status"]),
             "\n---\n",
             "# Output Rules\nSee work_md/AUDIT_REPORT_SPEC.md",
             "\n---\n",
@@ -477,7 +620,20 @@ def main(argv: Sequence[str] | None = None) -> int:
     terms = payload.get("terms", [])
     categories = payload.get("categories", [])
 
-    analysis_before = analyze_terms(terms, categories)
+    sources_payload: Dict | None = None
+    source_load_errors: List[Dict[str, str]] = []
+    try:
+        sources_payload = load_sources()
+    except FileNotFoundError:
+        source_load_errors.append(
+            {"id": "sources.json", "field": "file", "detail": "sources.json missing"}
+        )
+    except json.JSONDecodeError as exc:
+        source_load_errors.append(
+            {"id": "sources.json", "field": "file", "detail": f"Invalid JSON: {exc}"}
+        )
+
+    analysis_before = analyze_terms(terms, categories, sources_payload, source_load_errors)
     fix_stats = FixStats()
 
     mode = "fix" if args.fix else "check"
@@ -486,7 +642,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         fix_stats = apply_fixes(terms)
         if fix_stats.json_modified:
             write_terms(payload)
-        analysis_after = analyze_terms(terms, categories)
+        analysis_after = analyze_terms(terms, categories, sources_payload, source_load_errors)
     else:
         analysis_after = analysis_before
 
