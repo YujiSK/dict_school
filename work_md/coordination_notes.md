@@ -61,4 +61,4 @@
    8. `alunos` / 4 / T0036 就学時健康診断 (Exames Médicos para os Alunos...) / +S0006
    9. `reuni` / 4 / T0038 学級保護者会 (Reunião de pais e mestres) / +S0004
  10. `urina` / 4 / T0048 尿検査 (Exame de Urina) / +S0006
-   - S0001（NEWS教材）, S0004（MCICおたより語彙）, S0005（学校生活ガイダンス語彙）, S0006（AIA教育資料リンク集）をそれぞれ対応する頻出語に追加したため、未参照 WARN は 0 になった。
+  - S0001（NEWS教材）, S0004（MCICおたより語彙）, S0005（学校生活ガイダンス語彙）, S0006（AIA教育資料リンク集）をそれぞれ対応する頻出語に追加したため、未参照 WARN は 0 になった。成果を PR [#6](https://github.com/YujiSK/dict_school/pull/6)（branch: `issue-3-1-frequent-sources`）で提出済み。
