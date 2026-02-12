@@ -61,12 +61,18 @@
       "examples": {},
       "sourceRefs": [
         {
+          "sourceId": "S0001",
+          "page": null,
+          "note": ""
+        },
+        {
           "sourceId": "S0002",
           "page": null,
           "note": ""
         }
       ],
       "sources": [
+        "S0001",
         "S0002"
       ],
       "search": {
@@ -339,10 +345,16 @@
           "sourceId": "S0002",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0004",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0002"
+        "S0002",
+        "S0004"
       ],
       "search": {
         "ja": [
@@ -1104,10 +1116,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0005",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0005"
       ],
       "search": {
         "ja": [
@@ -1140,10 +1158,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0005",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0005"
       ],
       "search": {
         "ja": [
@@ -1176,10 +1200,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0005",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0005"
       ],
       "search": {
         "ja": [
@@ -1293,10 +1323,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0006",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0006"
       ],
       "search": {
         "ja": [
@@ -1333,12 +1369,18 @@
       "examples": {},
       "sourceRefs": [
         {
+          "sourceId": "S0001",
+          "page": null,
+          "note": ""
+        },
+        {
           "sourceId": "S0003",
           "page": null,
           "note": ""
         }
       ],
       "sources": [
+        "S0001",
         "S0003"
       ],
       "search": {
@@ -1376,10 +1418,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0004",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0004"
       ],
       "search": {
         "ja": [
@@ -1526,10 +1574,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0006",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0006"
       ],
       "search": {
         "ja": [
@@ -1740,10 +1794,16 @@
           "sourceId": "S0003",
           "page": null,
           "note": ""
+        },
+        {
+          "sourceId": "S0006",
+          "page": null,
+          "note": ""
         }
       ],
       "sources": [
-        "S0003"
+        "S0003",
+        "S0006"
       ],
       "search": {
         "ja": [

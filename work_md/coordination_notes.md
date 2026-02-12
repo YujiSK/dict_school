@@ -50,3 +50,15 @@
 - Update 4 (Issue #3 MVP): Introduced `sources.json` v0.3 (IDs `S####`, required `title/type`, optional `url/note/accessed_at`) and added deterministic `term.sources` arrays mirroring `sourceRefs`. `audit_terms.py` now FAILs when the ledger is missing/invalid, IDs collide, required keys are absent, or terms reference unknown sources. WARN covers malformed URLs/date stamps plus currently unreferenced sources. `--fix` only backfills missing `sources: []` fields—no automatic provenance guessing.
 - Update 4 (PR ready): Created PR [#4](https://github.com/YujiSK/dict_school/pull/4) – “Issue #2: Deterministic audit + v0.2.1 hotfix (spec/windows)”. Status: awaiting review; WARN limited to PT duplicate (T0038/T0039). Next action once merged: pivot to Issue #3 (sources ledger) per roadmap.
 - Update 5 (Issue #3 PR submitted): Created branch `issue-3-sources-ledger-mvp` and opened PR [#5](https://github.com/YujiSK/dict_school/pull/5) targeting `main`. Current WARN inventory (as documented in the PR body): PT duplicate T0038/T0039 plus unreferenced sources S0001/S0004/S0005/S0006. Awaiting review/merge; no destructive term edits included.
+- Update 6 (Issue #3.1 – frequent terms provenance): 抽出方法は `search.ja`/`search.pt` トークンの頻度を集計し、ストップリスト＆1文字以下を除外した上で、頻度降順→ID昇順でユニークな term を10件選定。トップ10と今回紐付けた sources は以下の通り（token / 出現数 / term / 追加source）：
+   1. `exame` / 11 / T0042 健康診断 (Exame Médico) / +S0006
+   2. `favor` / 10 / T0001 提出してください (Favor apresentar) / +S0001
+   3. `escola` / 10 / T0009 学校に電話してください (Favor telefonar para a escola) / +S0004
+   4. `sala` / 9 / T0037 授業参観 (Participação dos Pais na Sala de Aula) / +S0001
+   5. `cerim` / 4 / T0031 入学式 (Cerimônia de Ingresso) / +S0005
+   6. `nia` / 4 / T0032 卒業式 (Cerimônia de Formatura) / +S0005
+   7. `aula` / 4 / T0033 始業式 (Cerimônia de Início da Aula) / +S0005
+   8. `alunos` / 4 / T0036 就学時健康診断 (Exames Médicos para os Alunos...) / +S0006
+   9. `reuni` / 4 / T0038 学級保護者会 (Reunião de pais e mestres) / +S0004
+ 10. `urina` / 4 / T0048 尿検査 (Exame de Urina) / +S0006
+   - S0001（NEWS教材）, S0004（MCICおたより語彙）, S0005（学校生活ガイダンス語彙）, S0006（AIA教育資料リンク集）をそれぞれ対応する頻出語に追加したため、未参照 WARN は 0 になった。
