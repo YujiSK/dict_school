@@ -359,23 +359,6 @@ def render_auto_fix_preview(entries: List[Dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
-def render_structural_details(structural_errors: List[Dict[str, str]], unknown_categories: List[Dict[str, str]], duplicate_ids: List[str]) -> str:
-    lines = []
-    if structural_errors:
-        lines.append("## Structural Field Issues")
-        for issue in structural_errors:
-            lines.append(f"- {issue['id']} | {issue['field']} | {issue['detail']}")
-    if duplicate_ids:
-        lines.append("\n## Duplicate Term IDs")
-        for dup in sorted(duplicate_ids):
-            lines.append(f"- {dup}")
-    if unknown_categories:
-        lines.append("\n## Unknown Categories")
-        for entry in unknown_categories:
-            lines.append(f"- {entry['id']} | {entry['category']}")
-    return "\n".join(lines) if lines else "None"
-
-
 def render_fix_section(stats: FixStats, duplicate_count: int) -> str:
     lines = [
         f"- Terms updated: {stats.terms_modified}",
@@ -404,9 +387,6 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
         f"- Duplicate PT: {len(analysis['duplicate_pt'])}",
         f"- Type mismatch: {len(analysis['type_mismatches'])}",
         f"- Missing search field: {len(analysis['missing_search'])}",
-        f"- Structural issues: {len(analysis['structural_errors'])}",
-        f"- Duplicate IDs: {len(analysis['duplicate_ids'])}",
-        f"- Unknown categories: {len(analysis['unknown_categories'])}",
         f"- Auto-fix required: {'YES' if analysis['status'] == 'FAIL' else 'NO'}",
         "",
         "Overall Status:",
@@ -457,12 +437,6 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
 
     sections.append("\n---\n")
     sections.append("# 7. Blocking Issues\n" + blocking)
-
-    structural_details = render_structural_details(
-        analysis["structural_errors"], analysis["unknown_categories"], analysis["duplicate_ids"]
-    )
-    if structural_details != "None":
-        sections.append("\n" + structural_details)
 
     sections.extend(
         [
