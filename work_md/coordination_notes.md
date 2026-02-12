@@ -37,3 +37,12 @@
 - Summaries should state outcomes first, then next steps.
 
 *(Update this file as collaboration rules evolve.)*
+
+## Decisions – 2026-02-12
+- **Role scope confirmed for Rail**: Proceed autonomously on implementation/refactoring/scripts/PR prep/local verification unless encountering irreversible decisions, long-term data-structure impacts, or unclear strategic direction. This keeps Issue #2 velocity high without waiting on Echo for routine execution work.
+- **Assumptions**: Echo continues to own product priorities/design philosophy, and Beacon monitors structural drift, so Rail’s autonomy does not override those signals.
+- **Risks**: Potential misalignment if strategic direction shifts silently; mitigation is to escalate promptly when requirements feel ambiguous or when work could affect shared data contracts.
+
+## Worklog – Issue #2 (2026-02-12)
+- Kickoff: Aligning scripts/audit_terms.py `--fix` + `--check` with v0.2 spec (deterministic `search` regeneration, simplified `type` rules, structural FAIL guards). Assumption: Existing term/category schema stays as in `terms.json`/`schema_v0.2.md`; only `search` + `type` mutate. Risk: Tokenization or new type heuristics could surface unexpected WARN spikes—will monitor post-`--check` report before shipping.
+- Update 2: `--fix` now regenerates tokenized/lexicographically sorted `search` arrays and overwrites `type` with the new sentence/phrase heuristics; `--check` enforces structural guards (IDs, categories, ja/pt presence). Residual WARN intentionally limited to PT duplicate pair `[T0038, T0039]`. Next step after merging: shift to Issue #3 (sources ledger automation) while keeping audit script handy for regression checks.

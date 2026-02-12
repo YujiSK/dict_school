@@ -8,7 +8,7 @@ import re
 import sys
 import unicodedata
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Dict, List, Sequence
 
@@ -17,8 +17,21 @@ TERMS_PATH = REPO_ROOT / "terms.json"
 REPORT_ROOT = REPO_ROOT / "work_md" / "audit_reports"
 
 JA_SENTENCE_TOKENS = "。？！!?"
-PHRASE_HINTS = {" ", "　", "・", "／", "+", "-", "〜", "…", "→"}
-PHRASE_KEYWORDS = ["ください", "お願いします", "します", "しません", "しますか", "ませんか"]
+JA_TOKEN_SPLIT_RE = re.compile(
+    r"[\s、,，・·/／\\()（）\[\]{}【】「」『』<>\"'。、…~〜！？!?:;＋+\-]+"
+)
+PT_TOKEN_SPLIT_RE = re.compile(r"[^a-z0-9]+")
+PHRASE_KEYWORDS = [
+    "ください",
+    "お願いします",
+    "してください",
+    "しましょう",
+    "します",
+    "しません",
+    "できますか",
+    "してもいい",
+    "してはいけません",
+]
 
 
 @dataclass
@@ -52,65 +65,68 @@ def normalize_pt(value: str | None) -> str:
 
 
 def tokenize_pt(value: str | None) -> List[str]:
-    base = normalize_pt(value)
-    if not base:
+    normalized = normalize_common(value).lower()
+    if not normalized:
         return []
-    return [token for token in re.split(r"[^a-z0-9]+", base) if token]
+    tokens = [token for token in PT_TOKEN_SPLIT_RE.split(normalized) if token]
+    accentless = []
+    for token in tokens:
+        stripped = strip_accents(token)
+        if stripped:
+            accentless.append(stripped)
+    combined = set(tokens + accentless)
+    return sorted(combined)
 
 
-def infer_type(text: str) -> str:
-    if not text:
-        return "term"
-    if any(token in text for token in JA_SENTENCE_TOKENS) or len(text) >= 25:
+def tokenize_ja(value: str | None) -> List[str]:
+    normalized = normalize_common(value)
+    if not normalized:
+        return []
+    tokens = [token for token in JA_TOKEN_SPLIT_RE.split(normalized) if token]
+    return sorted(set(tokens))
+
+
+def contains_sentence_punctuation(text: str) -> bool:
+    return any(char in JA_SENTENCE_TOKENS for char in text)
+
+
+def infer_type(ja_text: str, pt_text: str) -> str:
+    if is_sentence(ja_text, pt_text):
         return "sentence"
-    if any(keyword in text for keyword in PHRASE_KEYWORDS):
-        return "phrase"
-    if any(hint in text for hint in PHRASE_HINTS):
-        return "phrase"
-    if len(text) >= 12:
+    if contains_phrase_keyword(ja_text):
         return "phrase"
     return "term"
 
 
-def type_reason(text: str) -> str:
-    if not text:
-        return "Empty text defaulted to term"
-    if any(token in text for token in JA_SENTENCE_TOKENS):
-        return "Contains sentence-ending punctuation"
-    if len(text) >= 25:
+def type_reason(ja_text: str, pt_text: str) -> str:
+    if is_sentence(ja_text, pt_text):
+        if contains_sentence_punctuation(ja_text) or contains_sentence_punctuation(pt_text):
+            return "Contains sentence-ending punctuation"
         return "Length >= 25 characters"
-    if any(keyword in text for keyword in PHRASE_KEYWORDS):
-        return "Contains request/intent keyword"
-    if any(hint in text for hint in PHRASE_HINTS):
-        return "Contains phrase delimiter character"
-    if len(text) >= 12:
-        return "Length >= 12 characters"
-    return "Length < 12 and no delimiters"
+    if contains_phrase_keyword(ja_text):
+        return "Contains predefined phrase keyword"
+    return "Defaulted to term"
 
 
-def unique(seq: Sequence[str]) -> List[str]:
-    seen: set[str] = set()
-    ordered: List[str] = []
-    for item in seq:
-        if not item or item in seen:
-            continue
-        seen.add(item)
-        ordered.append(item)
-    return ordered
+def contains_phrase_keyword(text: str) -> bool:
+    return any(keyword in text for keyword in PHRASE_KEYWORDS)
+
+
+def is_sentence(ja_text: str, pt_text: str) -> bool:
+    if ja_text and contains_sentence_punctuation(ja_text):
+        return True
+    if pt_text and contains_sentence_punctuation(pt_text):
+        return True
+    max_length = max(len(ja_text), len(pt_text))
+    return max_length >= 25
 
 
 def build_search_payload(term: Dict) -> Dict[str, List[str]]:
-    ja_candidates = [
-        normalize_common(term.get("ja")),
-        normalize_ja(term.get("ja")),
-        normalize_common(term.get("jaEasy")),
-    ]
     translations = term.get("translations") or {}
     pt_raw = translations.get("pt")
-    pt_candidates = [normalize_common(pt_raw), normalize_pt(pt_raw)] + tokenize_pt(pt_raw)
     return {
-        "ja": unique([c for c in ja_candidates if c]),
-        "pt": unique([c for c in pt_candidates if c]),
+        "ja": tokenize_ja(term.get("ja")),
+        "pt": tokenize_pt(pt_raw),
     }
 
 
@@ -159,19 +175,50 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
     missing_search = []
     empty_search = []
     auto_fix_preview = []
+    structural_errors = []
+    duplicate_ids: List[str] = []
+    unknown_categories: List[Dict[str, str]] = []
 
-    for term in sorted(terms, key=lambda t: t["id"]):
-        ja_text = normalize_common(term.get("ja"))
-        expected_type = infer_type(ja_text)
-        reason = type_reason(ja_text)
+    seen_ids: set[str] = set()
+    valid_categories = {item.get("id") for item in categories if item.get("id")}
+
+    for term in sorted(terms, key=lambda t: t.get("id", "")):
+        term_id = term.get("id")
+        if not term_id:
+            structural_errors.append({"id": "<missing>", "field": "id", "detail": "ID is required"})
+            continue
+        if term_id in seen_ids:
+            duplicate_ids.append(term_id)
+        seen_ids.add(term_id)
+
+        ja_original = term.get("ja", "")
+        ja_text = normalize_common(ja_original)
+        translations = term.get("translations") or {}
+        pt_original = translations.get("pt", "")
+        pt_text = normalize_common(pt_original)
+
+        if not ja_original:
+            structural_errors.append({"id": term_id, "field": "ja", "detail": "Japanese text missing"})
+
+        if not translations or not pt_original:
+            structural_errors.append({"id": term_id, "field": "translations.pt", "detail": "Portuguese text missing"})
+
+        category_id = term.get("categoryId")
+        if not category_id:
+            structural_errors.append({"id": term_id, "field": "categoryId", "detail": "Category missing"})
+        elif valid_categories and category_id not in valid_categories:
+            unknown_categories.append({"id": term_id, "category": category_id})
+
+        expected_type = infer_type(ja_text, pt_text)
+        reason = type_reason(ja_text, pt_text)
         current_type = term.get("type", "term")
         if expected_type != current_type:
             type_mismatches.append(
                 {
-                    "id": term["id"],
+                    "id": term_id,
                     "current": current_type,
                     "expected": expected_type,
-                    "ja": term.get("ja", ""),
+                    "ja": ja_original,
                     "reason": reason,
                 }
             )
@@ -181,22 +228,25 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
         needs_search = existing.get("ja") != desired_search["ja"] or existing.get("pt") != desired_search["pt"]
 
         if needs_search:
-            missing_search.append({"id": term["id"], "ja": term.get("ja", "")})
-            add_search = not term.get("search")
-            normalize_flag = ja_text != term.get("ja", "")
+            missing_search.append({"id": term_id, "ja": ja_original})
             auto_fix_preview.append(
                 {
-                    "id": term["id"],
-                    "add_search": "YES" if add_search else "NO",
+                    "id": term_id,
+                    "add_search": "YES" if not term.get("search") else "NO",
                     "update_type": "YES" if expected_type != current_type else "NO",
-                    "normalize": "YES" if normalize_flag else "NO",
                 }
             )
-        else:
-            if not desired_search["ja"] or not desired_search["pt"]:
-                empty_search.append({"id": term["id"], "ja": term.get("ja", "")})
+
+        if not desired_search["ja"] or not desired_search["pt"]:
+            empty_search.append({"id": term_id, "ja": ja_original})
 
     blocking_issues = []
+    if structural_errors:
+        blocking_issues.append(f"{len(structural_errors)} structural issues detected")
+    if duplicate_ids:
+        blocking_issues.append(f"Duplicate term IDs: {', '.join(sorted(duplicate_ids))}")
+    if unknown_categories:
+        blocking_issues.append(f"{len(unknown_categories)} terms reference unknown categories")
     if type_mismatches:
         blocking_issues.append(f"{len(type_mismatches)} type mismatches (see Section 3)")
     if missing_search:
@@ -217,6 +267,9 @@ def analyze_terms(terms: List[Dict], categories: List[Dict]) -> Dict:
         "missing_search": missing_search,
         "empty_search": empty_search,
         "auto_fix_preview": auto_fix_preview,
+        "structural_errors": structural_errors,
+        "duplicate_ids": duplicate_ids,
+        "unknown_categories": unknown_categories,
         "blocking_issues": blocking_issues,
         "status": status,
     }
@@ -226,20 +279,25 @@ def apply_fixes(terms: List[Dict]) -> FixStats:
     stats = FixStats()
     modified_ids: set[str] = set()
     for term in terms:
+        term_id = term.get("id", "")
         ja_text = normalize_common(term.get("ja"))
-        expected_type = infer_type(ja_text)
+        translations = term.get("translations") or {}
+        pt_text = normalize_common(translations.get("pt"))
+        expected_type = infer_type(ja_text, pt_text)
         current_type = term.get("type", "term")
         if expected_type != current_type:
             term["type"] = expected_type
             stats.type_updates += 1
-            modified_ids.add(term["id"])
+            if term_id:
+                modified_ids.add(term_id)
 
         desired_search = build_search_payload(term)
         existing = term.get("search") or {}
         if existing.get("ja") != desired_search["ja"] or existing.get("pt") != desired_search["pt"]:
             term["search"] = desired_search
             stats.search_updates += 1
-            modified_ids.add(term["id"])
+            if term_id:
+                modified_ids.add(term_id)
 
     stats.terms_modified = len(modified_ids)
     stats.json_modified = bool(modified_ids)
@@ -247,7 +305,7 @@ def apply_fixes(terms: List[Dict]) -> FixStats:
 
 
 def default_report_path(mode: str) -> Path:
-    timestamp = datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    timestamp = datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
     REPORT_ROOT.mkdir(parents=True, exist_ok=True)
     return REPORT_ROOT / f"audit_{mode}_{timestamp}.md"
 
@@ -296,10 +354,26 @@ def render_auto_fix_preview(entries: List[Dict[str, str]]) -> str:
                 f"- {entry['id']}",
                 f"  - Add search: {entry['add_search']}",
                 f"  - Update type: {entry['update_type']}",
-                f"  - Normalize suggested: {entry['normalize']}",
             ]
         )
     return "\n".join(lines)
+
+
+def render_structural_details(structural_errors: List[Dict[str, str]], unknown_categories: List[Dict[str, str]], duplicate_ids: List[str]) -> str:
+    lines = []
+    if structural_errors:
+        lines.append("## Structural Field Issues")
+        for issue in structural_errors:
+            lines.append(f"- {issue['id']} | {issue['field']} | {issue['detail']}")
+    if duplicate_ids:
+        lines.append("\n## Duplicate Term IDs")
+        for dup in sorted(duplicate_ids):
+            lines.append(f"- {dup}")
+    if unknown_categories:
+        lines.append("\n## Unknown Categories")
+        for entry in unknown_categories:
+            lines.append(f"- {entry['id']} | {entry['category']}")
+    return "\n".join(lines) if lines else "None"
 
 
 def render_fix_section(stats: FixStats, duplicate_count: int) -> str:
@@ -330,6 +404,9 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
         f"- Duplicate PT: {len(analysis['duplicate_pt'])}",
         f"- Type mismatch: {len(analysis['type_mismatches'])}",
         f"- Missing search field: {len(analysis['missing_search'])}",
+        f"- Structural issues: {len(analysis['structural_errors'])}",
+        f"- Duplicate IDs: {len(analysis['duplicate_ids'])}",
+        f"- Unknown categories: {len(analysis['unknown_categories'])}",
         f"- Auto-fix required: {'YES' if analysis['status'] == 'FAIL' else 'NO'}",
         "",
         "Overall Status:",
@@ -378,10 +455,17 @@ def render_report(mode: str, analysis: Dict, fix_stats: FixStats, include_previe
             )
         )
 
+    sections.append("\n---\n")
+    sections.append("# 7. Blocking Issues\n" + blocking)
+
+    structural_details = render_structural_details(
+        analysis["structural_errors"], analysis["unknown_categories"], analysis["duplicate_ids"]
+    )
+    if structural_details != "None":
+        sections.append("\n" + structural_details)
+
     sections.extend(
         [
-            "\n---\n",
-            "# 7. Blocking Issues\n" + blocking,
             "\n---\n",
             "# 8. Recommended Action\n- " + recommended_action(analysis["status"]),
             "\n---\n",
