@@ -71,9 +71,9 @@
           "提出してください"
         ],
         "pt": [
-          "Favor apresentar"
-        ],
-        "en": []
+          "apresentar",
+          "favor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -102,9 +102,10 @@
           "提出しません"
         ],
         "pt": [
-          "Não apresentar"
-        ],
-        "en": []
+          "apresentar",
+          "n",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -133,9 +134,9 @@
           "書いてください"
         ],
         "pt": [
-          "Favor escrever"
-        ],
-        "en": []
+          "escrever",
+          "favor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -164,9 +165,9 @@
           "確認してください"
         ],
         "pt": [
-          "Favor conferir"
-        ],
-        "en": []
+          "conferir",
+          "favor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -174,7 +175,7 @@
     },
     {
       "id": "T0005",
-      "type": "phrase",
+      "type": "sentence",
       "categoryId": "C01",
       "ja": "訂正してください",
       "jaEasy": "",
@@ -195,9 +196,10 @@
           "訂正してください"
         ],
         "pt": [
-          "Favor retificar (documento)"
-        ],
-        "en": []
+          "documento",
+          "favor",
+          "retificar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -226,9 +228,9 @@
           "印鑑を押してください"
         ],
         "pt": [
-          "Favor carimbar"
-        ],
-        "en": []
+          "carimbar",
+          "favor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -257,9 +259,8 @@
           "丸をつけてください"
         ],
         "pt": [
-          "Circular"
-        ],
-        "en": []
+          "circular"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -288,9 +289,11 @@
           "名前を書いてください"
         ],
         "pt": [
-          "Favor escrever o nome"
-        ],
-        "en": []
+          "escrever",
+          "favor",
+          "nome",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -298,7 +301,7 @@
     },
     {
       "id": "T0009",
-      "type": "phrase",
+      "type": "sentence",
       "categoryId": "C01",
       "ja": "学校に電話してください",
       "jaEasy": "",
@@ -319,9 +322,12 @@
           "学校に電話してください"
         ],
         "pt": [
-          "Favor telefonar para a escola"
-        ],
-        "en": []
+          "a",
+          "escola",
+          "favor",
+          "para",
+          "telefonar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -350,9 +356,10 @@
           "学校から電話します"
         ],
         "pt": [
-          "A escola telefonará"
-        ],
-        "en": []
+          "a",
+          "escola",
+          "telefonar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -381,9 +388,8 @@
           "欠席"
         ],
         "pt": [
-          "Falta"
-        ],
-        "en": []
+          "falta"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -412,9 +418,8 @@
           "出席します"
         ],
         "pt": [
-          "Comparecer"
-        ],
-        "en": []
+          "comparecer"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -443,9 +448,11 @@
           "遅れないでください"
         ],
         "pt": [
-          "Favor não atrasar"
-        ],
-        "en": []
+          "atrasar",
+          "favor",
+          "n",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -474,9 +481,9 @@
           "登校します"
         ],
         "pt": [
-          "Ir à escola"
-        ],
-        "en": []
+          "escola",
+          "ir"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -484,7 +491,7 @@
     },
     {
       "id": "T0015",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C01",
       "ja": "下校",
       "jaEasy": "",
@@ -505,9 +512,13 @@
           "下校"
         ],
         "pt": [
-          "Voltar para casa (saída da escola)"
-        ],
-        "en": []
+          "casa",
+          "da",
+          "escola",
+          "para",
+          "sa",
+          "voltar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -536,9 +547,10 @@
           "迎えに来てください"
         ],
         "pt": [
-          "Favor vir buscar"
-        ],
-        "en": []
+          "buscar",
+          "favor",
+          "vir"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -567,9 +579,8 @@
           "参加します"
         ],
         "pt": [
-          "Participar"
-        ],
-        "en": []
+          "participar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -598,9 +609,10 @@
           "参加しません"
         ],
         "pt": [
-          "Não participar"
-        ],
-        "en": []
+          "n",
+          "o",
+          "participar"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -629,9 +641,8 @@
           "承諾します"
         ],
         "pt": [
-          "Consinto"
-        ],
-        "en": []
+          "consinto"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -660,9 +671,10 @@
           "承諾しません"
         ],
         "pt": [
-          "Não consinto"
-        ],
-        "en": []
+          "consinto",
+          "n",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -691,9 +703,9 @@
           "連絡"
         ],
         "pt": [
-          "Aviso / Recado"
-        ],
-        "en": []
+          "aviso",
+          "recado"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -722,9 +734,10 @@
           "連絡帳"
         ],
         "pt": [
-          "Caderno de comunicados"
-        ],
-        "en": []
+          "caderno",
+          "comunicados",
+          "de"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -732,7 +745,7 @@
     },
     {
       "id": "T0023",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C01",
       "ja": "連絡袋",
       "jaEasy": "",
@@ -753,9 +766,12 @@
           "連絡袋"
         ],
         "pt": [
-          "Pasta para caderno de comunicados"
-        ],
-        "en": []
+          "caderno",
+          "comunicados",
+          "de",
+          "para",
+          "pasta"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -784,9 +800,8 @@
           "延期します"
         ],
         "pt": [
-          "Adiaremos"
-        ],
-        "en": []
+          "adiaremos"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -815,9 +830,11 @@
           "返金します"
         ],
         "pt": [
-          "Devolução de dinheiro"
-        ],
-        "en": []
+          "de",
+          "devolu",
+          "dinheiro",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -846,9 +863,8 @@
           "変更します"
         ],
         "pt": [
-          "Alteraremos"
-        ],
-        "en": []
+          "alteraremos"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -877,9 +893,8 @@
           "集めます"
         ],
         "pt": [
-          "Recolheremos"
-        ],
-        "en": []
+          "recolheremos"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -908,9 +923,9 @@
           "登録をしてください"
         ],
         "pt": [
-          "Favor cadastrar"
-        ],
-        "en": []
+          "cadastrar",
+          "favor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -918,7 +933,7 @@
     },
     {
       "id": "T0029",
-      "type": "phrase",
+      "type": "sentence",
       "categoryId": "C01",
       "ja": "メールで連絡します",
       "jaEasy": "",
@@ -939,9 +954,13 @@
           "メールで連絡します"
         ],
         "pt": [
-          "Avisaremos através de e-mail"
-        ],
-        "en": []
+          "atrav",
+          "avisaremos",
+          "de",
+          "e",
+          "mail",
+          "s"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -970,9 +989,10 @@
           "学校で買います"
         ],
         "pt": [
-          "Escola vai comprar"
-        ],
-        "en": []
+          "comprar",
+          "escola",
+          "vai"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1001,9 +1021,11 @@
           "入学式"
         ],
         "pt": [
-          "Cerimônia de Ingresso"
-        ],
-        "en": []
+          "cerim",
+          "de",
+          "ingresso",
+          "nia"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1032,9 +1054,11 @@
           "卒業式"
         ],
         "pt": [
-          "Cerimônia de Formatura"
-        ],
-        "en": []
+          "cerim",
+          "de",
+          "formatura",
+          "nia"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1042,7 +1066,7 @@
     },
     {
       "id": "T0033",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "始業式",
       "jaEasy": "",
@@ -1063,9 +1087,14 @@
           "始業式"
         ],
         "pt": [
-          "Cerimônia de Início da Aula"
-        ],
-        "en": []
+          "aula",
+          "cerim",
+          "cio",
+          "da",
+          "de",
+          "in",
+          "nia"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1073,7 +1102,7 @@
     },
     {
       "id": "T0034",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "終業式",
       "jaEasy": "",
@@ -1094,9 +1123,14 @@
           "終業式"
         ],
         "pt": [
-          "Cerimônia de Término da Aula"
-        ],
-        "en": []
+          "aula",
+          "cerim",
+          "da",
+          "de",
+          "nia",
+          "rmino",
+          "t"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1104,7 +1138,7 @@
     },
     {
       "id": "T0035",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "入学説明会",
       "jaEasy": "",
@@ -1125,9 +1159,14 @@
           "入学説明会"
         ],
         "pt": [
-          "Orientações para o Ingresso na escola"
-        ],
-        "en": []
+          "es",
+          "escola",
+          "ingresso",
+          "na",
+          "o",
+          "orienta",
+          "para"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1135,7 +1174,7 @@
     },
     {
       "id": "T0036",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "就学時健康診断",
       "jaEasy": "",
@@ -1156,9 +1195,18 @@
           "就学時健康診断"
         ],
         "pt": [
-          "Exames Médicos para os Alunos que ingressarão no Shogakkou"
-        ],
-        "en": []
+          "alunos",
+          "dicos",
+          "exames",
+          "ingressar",
+          "m",
+          "no",
+          "o",
+          "os",
+          "para",
+          "que",
+          "shogakkou"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1166,7 +1214,7 @@
     },
     {
       "id": "T0037",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "授業参観",
       "jaEasy": "",
@@ -1187,9 +1235,15 @@
           "授業参観"
         ],
         "pt": [
-          "Participação dos Pais na Sala de Aula"
-        ],
-        "en": []
+          "aula",
+          "de",
+          "dos",
+          "na",
+          "o",
+          "pais",
+          "participa",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1197,7 +1251,7 @@
     },
     {
       "id": "T0038",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "学級保護者会",
       "jaEasy": "",
@@ -1218,9 +1272,13 @@
           "学級保護者会"
         ],
         "pt": [
-          "Reunião de pais e mestres"
-        ],
-        "en": []
+          "de",
+          "e",
+          "mestres",
+          "o",
+          "pais",
+          "reuni"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1228,7 +1286,7 @@
     },
     {
       "id": "T0039",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "学級懇談会",
       "jaEasy": "",
@@ -1249,9 +1307,13 @@
           "学級懇談会"
         ],
         "pt": [
-          "Reunião de pais e mestres"
-        ],
-        "en": []
+          "de",
+          "e",
+          "mestres",
+          "o",
+          "pais",
+          "reuni"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1280,9 +1342,10 @@
           "個人面談"
         ],
         "pt": [
-          "Reunião Individual"
-        ],
-        "en": []
+          "individual",
+          "o",
+          "reuni"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1290,7 +1353,7 @@
     },
     {
       "id": "T0041",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "家庭訪問",
       "jaEasy": "",
@@ -1311,9 +1374,14 @@
           "家庭訪問"
         ],
         "pt": [
-          "Visita do Professor à Residência dos Alunos"
-        ],
-        "en": []
+          "alunos",
+          "do",
+          "dos",
+          "ncia",
+          "professor",
+          "resid",
+          "visita"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1342,9 +1410,10 @@
           "健康診断"
         ],
         "pt": [
-          "Exame Médico"
-        ],
-        "en": []
+          "dico",
+          "exame",
+          "m"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1373,9 +1442,12 @@
           "内科検診"
         ],
         "pt": [
-          "Exame de Clínica Geral"
-        ],
-        "en": []
+          "cl",
+          "de",
+          "exame",
+          "geral",
+          "nica"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1404,9 +1476,12 @@
           "身体測定"
         ],
         "pt": [
-          "Medida de Peso e Altura"
-        ],
-        "en": []
+          "altura",
+          "de",
+          "e",
+          "medida",
+          "peso"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1435,9 +1510,10 @@
           "歯科検診"
         ],
         "pt": [
-          "Exame Odontológico"
-        ],
-        "en": []
+          "exame",
+          "gico",
+          "odontol"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1466,9 +1542,10 @@
           "眼科検診"
         ],
         "pt": [
-          "Exame Oftalmológico"
-        ],
-        "en": []
+          "exame",
+          "gico",
+          "oftalmol"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1476,7 +1553,7 @@
     },
     {
       "id": "T0047",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "耳鼻咽喉科検診",
       "jaEasy": "",
@@ -1497,9 +1574,10 @@
           "耳鼻咽喉科検診"
         ],
         "pt": [
-          "Exame Otorrinolaringológico"
-        ],
-        "en": []
+          "exame",
+          "gico",
+          "otorrinolaringol"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1528,9 +1606,10 @@
           "尿検査"
         ],
         "pt": [
-          "Exame de Urina"
-        ],
-        "en": []
+          "de",
+          "exame",
+          "urina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1559,9 +1638,8 @@
           "予防接種"
         ],
         "pt": [
-          "Vacina"
-        ],
-        "en": []
+          "vacina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1590,9 +1668,11 @@
           "視力検査"
         ],
         "pt": [
-          "Teste de visão"
-        ],
-        "en": []
+          "de",
+          "o",
+          "teste",
+          "vis"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1600,7 +1680,7 @@
     },
     {
       "id": "T0051",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "心電図検査",
       "jaEasy": "",
@@ -1621,9 +1701,10 @@
           "心電図検査"
         ],
         "pt": [
-          "Exame de eletrocardiograma"
-        ],
-        "en": []
+          "de",
+          "eletrocardiograma",
+          "exame"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1652,9 +1733,10 @@
           "結核検診"
         ],
         "pt": [
-          "Exame de tuberculose"
-        ],
-        "en": []
+          "de",
+          "exame",
+          "tuberculose"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1662,7 +1744,7 @@
     },
     {
       "id": "T0053",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "防災訓練",
       "jaEasy": "",
@@ -1683,9 +1765,12 @@
           "防災訓練"
         ],
         "pt": [
-          "Treinamento em caso de desastre"
-        ],
-        "en": []
+          "caso",
+          "de",
+          "desastre",
+          "em",
+          "treinamento"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1693,7 +1778,7 @@
     },
     {
       "id": "T0054",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "引渡し訓練",
       "jaEasy": "",
@@ -1714,9 +1799,14 @@
           "引渡し訓練"
         ],
         "pt": [
-          "Treinamento para buscar o aluno na escola"
-        ],
-        "en": []
+          "aluno",
+          "buscar",
+          "escola",
+          "na",
+          "o",
+          "para",
+          "treinamento"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1745,9 +1835,8 @@
           "遠足"
         ],
         "pt": [
-          "Passeio"
-        ],
-        "en": []
+          "passeio"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1776,9 +1865,11 @@
           "校外学習"
         ],
         "pt": [
-          "Atividade fora da Escola"
-        ],
-        "en": []
+          "atividade",
+          "da",
+          "escola",
+          "fora"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1807,9 +1898,10 @@
           "修学旅行"
         ],
         "pt": [
-          "Excursão Escolar"
-        ],
-        "en": []
+          "escolar",
+          "excurs",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1838,9 +1930,10 @@
           "臨海学校"
         ],
         "pt": [
-          "Curso na Praia"
-        ],
-        "en": []
+          "curso",
+          "na",
+          "praia"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1869,9 +1962,10 @@
           "林間学校"
         ],
         "pt": [
-          "Curso no Campo"
-        ],
-        "en": []
+          "campo",
+          "curso",
+          "no"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1900,9 +1994,9 @@
           "運動会"
         ],
         "pt": [
-          "Gincana Escolar"
-        ],
-        "en": []
+          "escolar",
+          "gincana"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1910,7 +2004,7 @@
     },
     {
       "id": "T0061",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "体育祭",
       "jaEasy": "",
@@ -1931,9 +2025,13 @@
           "体育祭"
         ],
         "pt": [
-          "Competição de Educação Física"
-        ],
-        "en": []
+          "competi",
+          "de",
+          "educa",
+          "f",
+          "o",
+          "sica"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1941,7 +2039,7 @@
     },
     {
       "id": "T0062",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "作品展",
       "jaEasy": "",
@@ -1962,9 +2060,14 @@
           "作品展"
         ],
         "pt": [
-          "Exposição de Trabalhos Manuais dos Alunos"
-        ],
-        "en": []
+          "alunos",
+          "de",
+          "dos",
+          "exposi",
+          "manuais",
+          "o",
+          "trabalhos"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -1993,9 +2096,9 @@
           "文化祭"
         ],
         "pt": [
-          "Festa Cultural"
-        ],
-        "en": []
+          "cultural",
+          "festa"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2003,7 +2106,7 @@
     },
     {
       "id": "T0064",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "学芸会",
       "jaEasy": "",
@@ -2024,9 +2127,13 @@
           "学芸会"
         ],
         "pt": [
-          "Apresentação artística dos Alunos"
-        ],
-        "en": []
+          "alunos",
+          "apresenta",
+          "art",
+          "dos",
+          "o",
+          "stica"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2034,7 +2141,7 @@
     },
     {
       "id": "T0065",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "宿泊学習",
       "jaEasy": "",
@@ -2055,9 +2162,11 @@
           "宿泊学習"
         ],
         "pt": [
-          "Viagem escolar (com pernoite)"
-        ],
-        "en": []
+          "com",
+          "escolar",
+          "pernoite",
+          "viagem"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2065,7 +2174,7 @@
     },
     {
       "id": "T0066",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "芸術鑑賞会",
       "jaEasy": "",
@@ -2086,9 +2195,11 @@
           "芸術鑑賞会"
         ],
         "pt": [
-          "Festival de apreciar arte"
-        ],
-        "en": []
+          "apreciar",
+          "arte",
+          "de",
+          "festival"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2096,7 +2207,7 @@
     },
     {
       "id": "T0067",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "年間行事予定",
       "jaEasy": "",
@@ -2117,9 +2228,13 @@
           "年間行事予定"
         ],
         "pt": [
-          "Programação prevista dos eventos anuais"
-        ],
-        "en": []
+          "anuais",
+          "dos",
+          "eventos",
+          "o",
+          "prevista",
+          "programa"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2127,7 +2242,7 @@
     },
     {
       "id": "T0068",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "尿検査アンケート",
       "jaEasy": "",
@@ -2148,9 +2263,13 @@
           "尿検査アンケート"
         ],
         "pt": [
-          "Questionário do exame de urina"
-        ],
-        "en": []
+          "de",
+          "do",
+          "exame",
+          "question",
+          "rio",
+          "urina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2158,7 +2277,7 @@
     },
     {
       "id": "T0069",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "尿検査提出",
       "jaEasy": "",
@@ -2179,9 +2298,15 @@
           "尿検査提出"
         ],
         "pt": [
-          "Apresentar a urina coletada para o exame de urina"
-        ],
-        "en": []
+          "a",
+          "apresentar",
+          "coletada",
+          "de",
+          "exame",
+          "o",
+          "para",
+          "urina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2189,7 +2314,7 @@
     },
     {
       "id": "T0070",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C02",
       "ja": "尿検査容器配布",
       "jaEasy": "",
@@ -2210,9 +2335,15 @@
           "尿検査容器配布"
         ],
         "pt": [
-          "Distribuição do recipiente para o exame de urina"
-        ],
-        "en": []
+          "de",
+          "distribui",
+          "do",
+          "exame",
+          "o",
+          "para",
+          "recipiente",
+          "urina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2241,9 +2372,10 @@
           "職員室"
         ],
         "pt": [
-          "Sala dos professores"
-        ],
-        "en": []
+          "dos",
+          "professores",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2272,9 +2404,8 @@
           "事務室"
         ],
         "pt": [
-          "Secretaria"
-        ],
-        "en": []
+          "secretaria"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2303,9 +2434,10 @@
           "校長室"
         ],
         "pt": [
-          "Sala do diretor"
-        ],
-        "en": []
+          "diretor",
+          "do",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2334,9 +2466,8 @@
           "保健室"
         ],
         "pt": [
-          "Enfermaria"
-        ],
-        "en": []
+          "enfermaria"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2365,9 +2496,8 @@
           "図書室"
         ],
         "pt": [
-          "Biblioteca"
-        ],
-        "en": []
+          "biblioteca"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2396,9 +2526,11 @@
           "音楽室"
         ],
         "pt": [
-          "Sala de música"
-        ],
-        "en": []
+          "de",
+          "m",
+          "sala",
+          "sica"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2406,7 +2538,7 @@
     },
     {
       "id": "T0077",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "理科室",
       "jaEasy": "",
@@ -2427,9 +2559,13 @@
           "理科室"
         ],
         "pt": [
-          "Sala de ciências (laboratório)"
-        ],
-        "en": []
+          "ci",
+          "de",
+          "laborat",
+          "ncias",
+          "rio",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2458,9 +2594,10 @@
           "図工室"
         ],
         "pt": [
-          "Sala de artes"
-        ],
-        "en": []
+          "artes",
+          "de",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2468,7 +2605,7 @@
     },
     {
       "id": "T0079",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "家庭科室",
       "jaEasy": "",
@@ -2489,9 +2626,12 @@
           "家庭科室"
         ],
         "pt": [
-          "Sala de economia doméstica"
-        ],
-        "en": []
+          "de",
+          "dom",
+          "economia",
+          "sala",
+          "stica"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2520,9 +2660,9 @@
           "体育館"
         ],
         "pt": [
-          "Quadra coberta"
-        ],
-        "en": []
+          "coberta",
+          "quadra"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2551,9 +2691,11 @@
           "校庭"
         ],
         "pt": [
-          "Pátio (quadra externa)"
-        ],
-        "en": []
+          "externa",
+          "p",
+          "quadra",
+          "tio"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2582,9 +2724,8 @@
           "プール"
         ],
         "pt": [
-          "Piscina"
-        ],
-        "en": []
+          "piscina"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2613,9 +2754,8 @@
           "廊下"
         ],
         "pt": [
-          "Corredor"
-        ],
-        "en": []
+          "corredor"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2644,9 +2784,10 @@
           "教室"
         ],
         "pt": [
-          "Sala de aula"
-        ],
-        "en": []
+          "aula",
+          "de",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2675,9 +2816,8 @@
           "トイレ"
         ],
         "pt": [
-          "Banheiro"
-        ],
-        "en": []
+          "banheiro"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2706,9 +2846,11 @@
           "会議室"
         ],
         "pt": [
-          "Sala de reunião"
-        ],
-        "en": []
+          "de",
+          "o",
+          "reuni",
+          "sala"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2716,7 +2858,7 @@
     },
     {
       "id": "T0087",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "上履き",
       "jaEasy": "",
@@ -2737,9 +2879,12 @@
           "上履き"
         ],
         "pt": [
-          "Uwabaki (sapato de uso interno)"
-        ],
-        "en": []
+          "de",
+          "interno",
+          "sapato",
+          "uso",
+          "uwabaki"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2747,7 +2892,7 @@
     },
     {
       "id": "T0088",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "体育館シューズ",
       "jaEasy": "",
@@ -2768,9 +2913,13 @@
           "体育館シューズ"
         ],
         "pt": [
-          "Tênis apropriado para quadra coberta"
-        ],
-        "en": []
+          "apropriado",
+          "coberta",
+          "nis",
+          "para",
+          "quadra",
+          "t"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2778,7 +2927,7 @@
     },
     {
       "id": "T0089",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "体育館シューズ袋",
       "jaEasy": "",
@@ -2799,9 +2948,16 @@
           "体育館シューズ袋"
         ],
         "pt": [
-          "Sacola para o tênis apropriado para a quadra coberta"
-        ],
-        "en": []
+          "a",
+          "apropriado",
+          "coberta",
+          "nis",
+          "o",
+          "para",
+          "quadra",
+          "sacola",
+          "t"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2809,7 +2965,7 @@
     },
     {
       "id": "T0090",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C03",
       "ja": "ワックスがけ（教室、廊下）",
       "jaEasy": "",
@@ -2827,12 +2983,16 @@
       ],
       "search": {
         "ja": [
-          "ワックスがけ（教室、廊下）"
+          "ワックスがけ",
+          "廊下",
+          "教室"
         ],
         "pt": [
-          "Enceramento (classes e corredores)"
-        ],
-        "en": []
+          "classes",
+          "corredores",
+          "e",
+          "enceramento"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2861,9 +3021,10 @@
           "小学校"
         ],
         "pt": [
-          "Escola primária"
-        ],
-        "en": []
+          "escola",
+          "prim",
+          "ria"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2892,9 +3053,9 @@
           "中学校"
         ],
         "pt": [
-          "Escola ginasial"
-        ],
-        "en": []
+          "escola",
+          "ginasial"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2923,9 +3084,9 @@
           "学年"
         ],
         "pt": [
-          "Série"
-        ],
-        "en": []
+          "rie",
+          "s"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2954,9 +3115,8 @@
           "組"
         ],
         "pt": [
-          "Classe"
-        ],
-        "en": []
+          "classe"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -2985,9 +3145,9 @@
           "番"
         ],
         "pt": [
-          "Número"
-        ],
-        "en": []
+          "mero",
+          "n"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -3016,9 +3176,8 @@
           "ノート"
         ],
         "pt": [
-          "Caderno"
-        ],
-        "en": []
+          "caderno"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -3047,9 +3206,9 @@
           "ハンカチ"
         ],
         "pt": [
-          "Lenço"
-        ],
-        "en": []
+          "len",
+          "o"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -3078,9 +3237,8 @@
           "リュック"
         ],
         "pt": [
-          "Mochila"
-        ],
-        "en": []
+          "mochila"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -3106,12 +3264,15 @@
       ],
       "search": {
         "ja": [
-          "旅行用かばん（大きい）"
+          "大きい",
+          "旅行用かばん"
         ],
         "pt": [
-          "Bolsa de Viagem (Grande)"
-        ],
-        "en": []
+          "bolsa",
+          "de",
+          "grande",
+          "viagem"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
@@ -3119,7 +3280,7 @@
     },
     {
       "id": "T0100",
-      "type": "term",
+      "type": "sentence",
       "categoryId": "C04",
       "ja": "部活動が あります",
       "jaEasy": "",
@@ -3137,12 +3298,14 @@
       ],
       "search": {
         "ja": [
-          "部活動が あります"
+          "あります",
+          "部活動が"
         ],
         "pt": [
-          "Haverá atividade extracurricular"
-        ],
-        "en": []
+          "atividade",
+          "extracurricular",
+          "haver"
+        ]
       },
       "status": "draft",
       "confidence": 0.8,
